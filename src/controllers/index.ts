@@ -9,3 +9,8 @@ export * from './customer-invoice.controller';
 export * from './customer-address.controller';
 export * from './customer-customer-user.controller';
 export * from './customer-user-customer.controller';
+export * from './brand.controller';
+export * from './category.controller';
+export * from './product.controller';
+export * from './customer.controller';
+export * from './invoice.controller';
