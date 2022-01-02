@@ -21,6 +21,15 @@ export class ProductInvoice extends Entity {
   })
   unit_price: number;
 
+  @property({
+    type: 'number',
+  })
+  invoiceId?: number;
+
+  @property({
+    type: 'number',
+  })
+  productId?: number;
 
   constructor(data?: Partial<ProductInvoice>) {
     super(data);

@@ -9,6 +9,15 @@ export class ProductCategory extends Entity {
   })
   id?: number;
 
+  @property({
+    type: 'number',
+  })
+  productId?: number;
+
+  @property({
+    type: 'number',
+  })
+  categoryId?: number;
 
   constructor(data?: Partial<ProductCategory>) {
     super(data);

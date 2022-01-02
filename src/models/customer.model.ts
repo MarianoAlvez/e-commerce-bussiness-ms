@@ -1,4 +1,7 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany, hasOne} from '@loopback/repository';
+import {Invoice} from './invoice.model';
+import {Address} from './address.model';
+import {CustomerUser} from './customer-user.model';
 
 @model()
 export class Customer extends Entity {
@@ -39,6 +42,14 @@ export class Customer extends Entity {
   })
   status?: number;
 
+  @hasMany(() => Invoice)
+  invoices: Invoice[];
+
+  @hasOne(() => Address)
+  address: Address;
+
+  @hasOne(() => CustomerUser)
+  customerUser: CustomerUser;
 
   constructor(data?: Partial<Customer>) {
     super(data);
